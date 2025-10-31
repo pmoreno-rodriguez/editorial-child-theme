@@ -1,7 +1,7 @@
 name: Editorial Child
 slug: editorial_child
 type: theme
-version: 3.0.0
+version: 1.0.0
 description: GravCMS port of the HTML5UP theme Editorial
 icon: text-width
 author:
@@ -15,78 +15,16 @@ readme: https://github.com/pmoreno-rodriguez/grav-theme-editorial/blob/develop/R
 license: MIT
 
 
-form:
-  validation: loose
+dependencies:
+  - { name: grav, version: '>=1.7.50' }
+  - { name: delivernext, version: '>=3.0.0' }
 
-  fields:
-    general:
-      type: fieldset
-      title: EDITORIAL.ADMIN.THEME.THEME_CONFIG
-      collapsible: true
-      collapsed: false
-      import@:
-        type: theme/general
-        context: blueprints://
+extends@:
+  type: editorial/blueprints
+  context: themes://
 
-    header:
-      type: fieldset
-      title: EDITORIAL.ADMIN.THEME.HEADER_SECTION
-      collapsible: true
-      collapsed: true
-      import@:
-        type: theme/header
-        context: blueprints://
+#form:
+  #validation: loose
+  #fields:
 
-    sidebar:
-      type: fieldset
-      title: EDITORIAL.ADMIN.THEME.SIDEBAR.SECTION
-      collapsible: true
-      collapsed: true
-      import@:
-        type: theme/sidebar
-        context: blueprints://
-
-    blog:
-      type: fieldset
-      title: EDITORIAL.ADMIN.THEME.BLOG.DEFAULTS
-      collapsible: true
-      collapsed: true
-      import@:
-        type: theme/blog
-        context: blueprints://
-
-    contact:
-      type: fieldset
-      title: EDITORIAL.ADMIN.THEME.CONTACT.TITLE
-      collapsible: true
-      collapsed: true
-      import@:
-        type: theme/contact
-        context: blueprints://
-
-    social:
-      type: fieldset
-      title: EDITORIAL.ADMIN.THEME.SOCIAL.TITLE
-      collapsible: true
-      collapsed: true
-      import@:
-        type: theme/social
-        context: blueprints://
-
-    custommenu:
-      type: fieldset
-      title: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.TITLE
-      collapsible: true
-      collapsed: true
-      import@:
-        type: theme/custommenu
-        context: blueprints://
-
-    seo:
-      type: fieldset
-      title: EDITORIAL.ADMIN.THEME.SEO.TITLE
-      collapsible: true
-      collapsed: true
-      import@:
-        type: theme/seo
-        context: blueprints://
+  # Additional fields can be added here
